@@ -5,7 +5,7 @@ const Workout = require('../models/Workout')
 const apiRoutes = require('./api');
 
 
-router.use('/', htmlRoutes);
+router.use('/', homeRoutes);
 router.use('/api', apiRoutes);
 
 
