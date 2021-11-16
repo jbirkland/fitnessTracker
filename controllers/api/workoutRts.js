@@ -7,15 +7,30 @@ router.get("/", async (req, res)=> {
   res.json(exercises)
 })
 
-router.put("/", async (req, res) => {
-console.log("hello world")
-res.send("HELLO WORLD")
-})
+router.put("/:id", ({ body, params }, res) => {
+  Workout.findByIdAndUpdate(
+    params.id,
+    { $push: { exercises: body } },
+    { new: true }
+  )
+  .then(data => {
+    res.json(data);
+  })
+  .catch(err => {
+    res.json(err);
+  });
+});
 
-router.post("/", async (req, res) => {
-  console.log("hello world")
-  res.send("HELLO WORLD")
-})
+
+router.post("/", (req, res) => {
+    Workout.create({})
+      .then((data) => {
+        res.json(data);
+      })
+      .catch(err => {
+        res.json(err);
+      });
+  });
 
 
 
