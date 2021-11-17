@@ -14,7 +14,7 @@ When the initial app is loaded the user is requested to create a new workout. On
 
 #### Link to the Deployed Page
 Deployed on [Heroku](https://glacial-gorge-00968.herokuapp.com/?id=61947b8137f3270016b1511c)
-Repo @ [Github] (https://github.com/jbirkland/fitnessTracker)
+Repo @ [Github](https://github.com/jbirkland/fitnessTracker)
 >
 
 
