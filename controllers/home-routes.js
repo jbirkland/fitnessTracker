@@ -3,17 +3,17 @@ const path = require("path");
 
 
 
-//Homepage route
+//Routes user to Homepage html
 router.get('/', (req,res) => {
   res.sendFile(path.join(__dirname + "../../public/index.html"));
 });
 
-//Exercise route
+//Routes user to Excercise html
 router.get('/exercise', (req, res) =>{
   res.sendFile(path.join(__dirname + "../../public/exercise.html"));
 });
 
-// Stats router
+// Routes user to Stats html
 router.get('/stats', (req, res) =>{
   res.sendFile(path.join(__dirname + "../../public/stats.html"));
 });
